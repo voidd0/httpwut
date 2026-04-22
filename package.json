@@ -1,0 +1,52 @@
+{
+  "name": "@v0idd0/httpwut",
+  "version": "2.0.0",
+  "description": "httpwut — HTTP request debugger. Why isn't my request working? Show DNS/TCP/TLS timing, follow redirects, diff endpoints, retry on 5xx, emit curl or JSON. Free forever from vøiddo.",
+  "main": "src/requester.js",
+  "bin": {
+    "httpwut": "./bin/httpwut.js"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "http",
+    "https",
+    "debug",
+    "debugger",
+    "request",
+    "curl",
+    "api",
+    "testing",
+    "rest",
+    "ttfb",
+    "timing",
+    "redirects",
+    "diff",
+    "cli",
+    "voiddo"
+  ],
+  "author": "vøiddo <support@voiddo.com> (https://voiddo.com)",
+  "license": "MIT",
+  "homepage": "https://voiddo.com/tools/httpwut/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voidd0/httpwut.git"
+  },
+  "bugs": {
+    "url": "https://github.com/voidd0/httpwut/issues",
+    "email": "support@voiddo.com"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ]
+}
