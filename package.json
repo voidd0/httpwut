@@ -1,6 +1,6 @@
 {
   "name": "@v0idd0/httpwut",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "httpwut — HTTP request debugger. Why isn't my request working? Show DNS/TCP/TLS timing, follow redirects, diff endpoints, retry on 5xx, emit curl or JSON. Free forever from vøiddo.",
   "main": "src/requester.js",
   "bin": {
@@ -44,9 +44,18 @@
     "node": ">=14"
   },
   "files": [
-    "bin",
-    "src",
-    "README.md",
-    "LICENSE"
-  ]
+    "bin/",
+    "src/",
+    "LICENSE",
+    "README.md"
+  ],
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "funding": {
+    "type": "individual",
+    "url": "https://voiddo.com/contact/"
+  }
 }
