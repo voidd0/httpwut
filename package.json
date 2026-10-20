@@ -1,7 +1,7 @@
 {
   "name": "@v0idd0/httpwut",
-  "version": "2.0.2",
-  "description": "httpwut — HTTP request debugger. Why isn't my request working? Show DNS/TCP/TLS timing, follow redirects, diff endpoints, retry on 5xx, emit curl or JSON. Free forever from vøiddo.",
+  "version": "2.0.4",
+  "description": "HTTP request debugger. Shows DNS, TCP and TLS timing, follows redirects, compares two endpoints, retries on 5xx and prints the equivalent curl command or JSON.",
   "main": "src/requester.js",
   "bin": {
     "httpwut": "./bin/httpwut.js"
@@ -13,22 +13,19 @@
     "http",
     "https",
     "debug",
-    "debugger",
     "request",
     "curl",
     "api",
     "testing",
-    "rest",
     "ttfb",
     "timing",
     "redirects",
     "diff",
-    "cli",
-    "voiddo"
+    "cli"
   ],
   "author": "vøiddo <support@voiddo.com> (https://voiddo.com)",
   "license": "MIT",
-  "homepage": "https://voiddo.com/tools/httpwut/",
+  "homepage": "https://tools.voiddo.com/httpwut/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/voidd0/httpwut.git"
@@ -44,15 +41,10 @@
     "node": ">=14"
   },
   "files": [
-    "bin/",
-    "src/",
-    "LICENSE",
-    "README.md"
-  ],
-  "os": [
-    "darwin",
-    "linux",
-    "win32"
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
   ],
   "funding": {
     "type": "individual",

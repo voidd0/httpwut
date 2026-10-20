@@ -5,9 +5,13 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-A0573A.svg)](LICENSE)
 [![Node ≥14](https://img.shields.io/badge/node-%E2%89%A514-1F1A14)](package.json)
 
-**HTTP request debugger for humans.** "Why isn't my request working?" — this tool answers that, loud and specific, in under a second.
+**[Homepage](https://tools.voiddo.com/httpwut/?ref=httpwut-readme)** · **[GitHub](https://github.com/voidd0/httpwut)** · **[npm](https://www.npmjs.com/package/@v0idd0/httpwut)** · **[All tools](https://tools.voiddo.com/?ref=httpwut-catalog-readme)** · **[Contact](mailto:support@voiddo.com)**
 
-Free forever gift from [vøiddo](https://voiddo.com).
+---
+
+**HTTP request debugger for humans.** "Why isn't my request working?", this tool answers that, loud and specific, in under a second.
+
+gift from [vøiddo](https://voiddo.com).
 
 ```
 ┌───────────────────────────────────────┐
@@ -28,7 +32,7 @@ Free forever gift from [vøiddo](https://voiddo.com).
 
 ## Why httpwut
 
-You fire a request. Something's off. `curl -v` dumps a wall of text, Postman hides the timing, Insomnia needs a GUI. You just want to know **what actually happened on the wire** — DNS, TCP, TLS, TTFB, each phase measured, redirects walked, headers diffed, status explained in plain English (and, ok, a little "bruh").
+You fire a request. Something's off. `curl -v` dumps a wall of text, Postman hides the timing, Insomnia needs a GUI. You just want to know **what actually happened on the wire**, DNS, TCP, TLS, TTFB, each phase measured, redirects walked, headers diffed, status explained in plain English (and, ok, a little "bruh").
 
 httpwut is that. One binary. Zero config. Works in SSH sessions, CI logs, and Docker containers without pulling a thousand dependencies.
 
@@ -125,7 +129,7 @@ httpwut https://api.example.com --bearer "$TOKEN" --curl
 ## Features
 
 ### Phase-timing breakdown
-httpwut measures each phase from the Node socket lifecycle — DNS lookup, TCP connect, TLS handshake, server wait, TTFB, and download — and prints them as stacked bars. No wrapping `curl --trace-ascii`, no guessing which phase is slow.
+httpwut measures each phase from the Node socket lifecycle, DNS lookup, TCP connect, TLS handshake, server wait, TTFB, and download, and prints them as stacked bars. No wrapping `curl --trace-ascii`, no guessing which phase is slow.
 
 ### Human-readable errors
 Every `ECONNREFUSED`, `ENOTFOUND`, `EAI_AGAIN`, `CERT_HAS_EXPIRED`, `ERR_TLS_CERT_ALTNAME_INVALID`, `SELF_SIGNED_CERT_IN_CHAIN` is translated. No more googling cryptic Node error codes.
@@ -140,10 +144,10 @@ Every 4xx and 5xx gets a one-liner in plain English. Includes modern codes most 
 `--follow` hops up to 10 redirects and prints every step with status, URL, and color coding.
 
 ### JSON envelope
-`--json` emits a single JSON object with `ok / url / status / headers / body / timing / redirectChain / statusHelp` — drop it straight into `jq`, GitHub Actions matrices, or `uptime` scripts.
+`--json` emits a single JSON object with `ok / url / status / headers / body / timing / redirectChain / statusHelp`, drop it straight into `jq`, GitHub Actions matrices, or `uptime` scripts.
 
 ### `curl` emitter
-`--curl` prints the exact `curl` command that would produce the same request — method, headers, body, `-k`, all of it — without actually firing. Perfect for pasting into bug reports.
+`--curl` prints the exact `curl` command that would produce the same request, method, headers, body, `-k`, all of it, without actually firing. Perfect for pasting into bug reports.
 
 ### Retries with backoff
 `--retry 3 --retry-on-status 502,503,504` retries on network errors and configurable status codes with linear backoff. Reports `(after N attempts)` in the final status block so you know it wasn't a first-shot win.
@@ -174,30 +178,19 @@ console.log(res.status, getStatusHelp(res.status), res.timing);
 
 Exports: `makeRequest`, `makeRequestWithRetries`, `followRedirects`, `parseHeaders`, `getErrorHelp`, `getStatusHelp`, `isSuccess`, `formatJson`, `truncate`, `compareResponses`, `toCurl`, `buildUrl`, `ERROR_HELP`, `STATUS_HELP`.
 
-## From the same studio
-
-vøiddo builds sharp, free-forever CLIs for devs who are tired of paywalls:
-
-- [`@v0idd0/jsonyo`](https://voiddo.com/tools/jsonyo/) — JSON that yells at you when it's broken
-- [`@v0idd0/tokcount`](https://voiddo.com/tools/tokcount/) — token counter for 60+ LLMs (GPT-5.4, Claude Opus 4.7, Gemini 3.1, Llama 4, Grok 4.1)
-- [`@v0idd0/ctxstuff`](https://voiddo.com/tools/ctxstuff/) — stuff a repo into an LLM context window without the OOM
-- [`@v0idd0/promptdiff`](https://voiddo.com/tools/promptdiff/) — diff two prompts, see token impact + word-frequency delta
-
-Full catalog: [voiddo.com/tools](https://voiddo.com/tools/).
-
 ## License
 
-MIT © [vøiddo](https://voiddo.com) — free forever, no asterisks.
+MIT © [vøiddo](https://voiddo.com), no asterisks.
 
 ## Links
 
-- Docs: https://voiddo.com/tools/httpwut/
+- Docs: https://tools.voiddo.com/httpwut/?ref=httpwut-docs-readme
 - Source: https://github.com/voidd0/httpwut
 - npm: https://npmjs.com/package/@v0idd0/httpwut
-- Studio: https://voiddo.com
+- Studio: https://voiddo.com/?ref=httpwut-studio-readme
 - Issues: https://github.com/voidd0/httpwut/issues
 - Support: support@voiddo.com
 
 ---
 
-Built by [vøiddo](https://voiddo.com/) — a small studio shipping AI-flavoured products, free dev tools, Chrome extensions and weird browser games.
+Maintained by v0idd0.
